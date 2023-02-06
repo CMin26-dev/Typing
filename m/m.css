@@ -23,11 +23,11 @@
    height: 40%;
   
 }
-.keyboard{
-   margin-top: -280px;
+#keyboard{
+   margin-left: 320px;
    display: table;
-   width: 100%;
-   
+   width: 55%;
+   align-items: center;
    text-align:center;
    justify-content: row;
 }
@@ -35,13 +35,14 @@
 
 
 #keyboard Input[Type="Button"] {
-   Padding: 20px 30px;
+   Padding: 25px 35px;
+   
     Border-Radius: 60px;
     Border: 3px Solid #202c2b;
     Background: #13ab9e;
     Color: #Fff;
     Text-Transform: Uppercase;
-    height: 80%;
-    width: 20%;
+    height: 26px;
+    width: 30px;
     cursor: pointer;
 }
