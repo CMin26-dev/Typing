@@ -1,0 +1,47 @@
+.container{
+   margin: auto 0;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   background-color:rgb(176,230,243);
+   width: 100vw;
+   height: 100vh;
+}
+.top{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 60%;
+   
+}
+.bottom{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 40%;
+  
+}
+.keyboard{
+   margin-top: -280px;
+   display: table;
+   width: 100%;
+   
+   text-align:center;
+   justify-content: row;
+}
+
+
+
+#keyboard Input[Type="Button"] {
+   Padding: 20px 30px;
+    Border-Radius: 60px;
+    Border: 3px Solid #202c2b;
+    Background: #13ab9e;
+    Color: #Fff;
+    Text-Transform: Uppercase;
+    height: 80%;
+    width: 20%;
+    cursor: pointer;
+}
