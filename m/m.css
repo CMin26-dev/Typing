@@ -1,5 +1,5 @@
 .container{
-   margin: auto 0;
+   margin: 0, auto;
    display: flex;
    justify-content: center;
    flex-direction: column;
@@ -39,8 +39,8 @@
    
     Border-Radius: 60px;
     Border: 3px Solid #202c2b;
-    Background: #13ab9e;
-    Color: #Fff;
+    Background: #90f1cf;
+    Color: #060606;
     Text-Transform: Uppercase;
     height: 26px;
     width: 30px;

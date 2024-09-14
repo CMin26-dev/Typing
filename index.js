@@ -1,37 +1,41 @@
 
 let title= document.getElementById('randomWord');
 let inputTitle= document.getElementById('inputWord');
-let worddictionary =  ["a","b","c","d","e","f","i","g","h","one","two","three","four","five","six","seven","eight","nine","ten"];
+let worddictionary =  ["Tôi","có","c","d","e","f","i","g","h","one","two","three","four","five","six","seven","eight","nine","ten","lấy","ví","dụ","một","dòng","sông","trôi","chảy","bản","sắc","cố","hữu","của","dân","tộc","Việt","Nam"];
 //console.log(worddictionary.length);
 //1.randomtukhoa
 let randomword = worddictionary[ Math.floor(Math.random() *worddictionary.length )];
  console.log(randomword);
-let score = document.getElementById("point 1");
-let tim = document.getElementById('countDowntime');
+let diem = document.getElementById("point");
+let counttime = document.getElementById('countDowntime');
 
-let time = 11;
+let time = 1;
 let countDown = setInterval(thoigian,1000);
 let point=0;
 
-function lopp()
+function het()
 {
-    score.innerHTML = "Your Score: " + point;
    
     randomword = worddictionary[Math.floor(Math.random() * worddictionary.length)];
     title.innerHTML = randomword;
     inputTitle.value = "";
     countDown;
-    time = 11;
+    time = 15;
     return countDown;
+    
 }
-let addBt = document.getElementById('addBt');
+let addbutton = document.getElementById('addbutton');
 
-addBt.addEventListener('click',restart)
+addbutton.addEventListener('click',restart)
 
 function restart()
 {
     point = 0;
-    lopp();
+    diem.innerHTML = point;
+    time = 0
+    time.innerHTML =time;
+    het();
+
 }
 
 
@@ -39,11 +43,11 @@ function restart()
 //countdown thoigian
 function thoigian(){
     time--;
-    tim.innerHTML= "Your Time: " + time;
+    counttime.innerHTML= "Your Time: " + time;
     
-    if (time <= 0){
-        
-       lopp();
+    if(time<=-1) {
+        alert("Het gio!!!");
+        restart();
     }
  }
 title.innerHTML=randomword;
@@ -52,14 +56,14 @@ inputTitle.addEventListener("keyup", ({key}) => {
     if (key === "Enter") {
         // Do work
         if(inputTitle.value === randomword) {
-            //randomword = worddictionary[ Math.floor(Math.random() *worddictionary.length  )];
-           // title.innerHTML = randomword;
-            //inputTitle.value = "";
-            point++;
-            lopp();
+            randomword = worddictionary[ Math.floor(Math.random() *worddictionary.length  )];
+           title.innerHTML = randomword;
+            inputTitle.value = "";
+            point++ ;
+            diem.innerHTML = "Your Score: " + point;
             
-        }else{
-            lopp();
+        }else {
+            het();
         }
     }
 })
